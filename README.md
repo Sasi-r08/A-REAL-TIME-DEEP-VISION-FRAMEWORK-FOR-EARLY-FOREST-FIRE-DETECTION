@@ -1,5 +1,4 @@
-
-<p align="center"> # 🔥 Forest Fire Detection System</p>
+ # 🔥 Forest Fire Detection System
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python" alt="Python">
