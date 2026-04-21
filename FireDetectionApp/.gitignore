@@ -1,1 +1,6 @@
+*.zip
+*.pt
+*.pth
+*.onnx
+.env
 __pycache__/
