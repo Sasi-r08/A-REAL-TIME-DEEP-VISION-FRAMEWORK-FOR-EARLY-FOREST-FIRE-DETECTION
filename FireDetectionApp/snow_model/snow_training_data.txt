@@ -1,0 +1,380 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run 'Import-Module PSReadLine'.
+
+PS D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model> python train.py
+Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 1% ──────────── 56.0KB/6.2MB 147.0KB/s 0.1s<4Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 2% ──────────── 120.0KB/6.2MB 277.2KB/s 0.2s<Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 4% ──────────── 240.0KB/6.2MB 1.1MB/s 0.3s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 6% ╸─────────── 384.0KB/6.2MB 1.1MB/s 0.5s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 7% ╸─────────── 464.0KB/6.2MB 434.0KB/s 0.6s<Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 9% ━─────────── 544.0KB/6.2MB 540.7KB/s 0.7s<Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 9% ━─────────── 592.0KB/6.2MB 466.6KB/s 0.8s<Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 11% ━─────────── 688.0KB/6.2MB 610.0KB/s 0.9sDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 12% ━─────────── 784.0KB/6.2MB 651.9KB/s 1.1sDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 14% ━╸────────── 896.0KB/6.2MB 1.0MB/s 1.2s<5Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 16% ━╸────────── 992.0KB/6.2MB 706.1KB/s 1.3sDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 16% ━╸────────── 1008.0KB/6.2MB 508.6KB/s 1.6Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 17% ━━────────── 1.1/6.2MB 461.9KB/s 1.9s<11.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 18% ━━────────── 1.1/6.2MB 432.4KB/s 2.1s<12.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 19% ━━────────── 1.2/6.2MB 387.7KB/s 2.2s<13.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 20% ━━────────── 1.2/6.2MB 321.5KB/s 2.5s<16.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 21% ━━────────── 1.3/6.2MB 431.1KB/s 2.6s<11.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 22% ━━╸───────── 1.3/6.2MB 357.5KB/s 2.8s<14.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 22% ━━╸───────── 1.4/6.2MB 285.9KB/s 3.0s<17.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 23% ━━╸───────── 1.4/6.2MB 335.7KB/s 3.1s<14.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 24% ━━╸───────── 1.5/6.2MB 253.1KB/s 4.4s<19.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 25% ━━╸───────── 1.5/6.2MB 273.0KB/s 4.6s<17.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 25% ━━━───────── 1.6/6.2MB 280.8KB/s 4.7s<17.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 26% ━━━───────── 1.6/6.2MB 243.6KB/s 4.8s<19.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 26% ━━━───────── 1.6/6.2MB 193.8KB/s 5.2s<24.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 27% ━━━───────── 1.7/6.2MB 201.7KB/s 5.5s<23.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 28% ━━━───────── 1.7/6.2MB 207.6KB/s 5.7s<22.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 29% ━━━───────── 1.8/6.2MB 240.7KB/s 5.9s<18.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 29% ━━━───────── 1.8/6.2MB 193.5KB/s 6.1s<23.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 30% ━━━╸──────── 1.9/6.2MB 249.6KB/s 6.3s<18.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 30% ━━━╸──────── 1.9/6.2MB 207.5KB/s 6.5s<21.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 31% ━━━╸──────── 1.9/6.2MB 230.7KB/s 6.7s<19.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 31% ━━━╸──────── 2.0/6.2MB 255.0KB/s 6.8s<17.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 32% ━━━╸──────── 2.0/6.2MB 213.3KB/s 7.2s<20.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 33% ━━━╸──────── 2.0/6.2MB 221.3KB/s 7.4s<19.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 34% ━━━━──────── 2.1/6.2MB 261.2KB/s 7.5s<16.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 34% ━━━━──────── 2.1/6.2MB 220.1KB/s 7.8s<19.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 35% ━━━━──────── 2.2/6.2MB 283.3KB/s 7.9s<14.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 36% ━━━━──────── 2.2/6.2MB 224.6KB/s 8.4s<18.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 36% ━━━━──────── 2.3/6.2MB 240.3KB/s 8.6s<17.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 37% ━━━━──────── 2.3/6.2MB 236.0KB/s 8.8s<17.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 37% ━━━━──────── 2.3/6.2MB 181.2KB/s 9.1s<22.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 38% ━━━━╸─────── 2.4/6.2MB 197.2KB/s 9.3s<20.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 39% ━━━━╸─────── 2.4/6.2MB 188.1KB/s 9.5s<20.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 39% ━━━━╸─────── 2.5/6.2MB 259.2KB/s 9.6s<15.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 40% ━━━━╸─────── 2.5/6.2MB 238.3KB/s 9.8s<16.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 40% ━━━━╸─────── 2.5/6.2MB 213.3KB/s 9.9s<18.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 41% ━━━━╸─────── 2.5/6.2MB 291.5KB/s 10.0s<13Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 41% ━━━━╸─────── 2.6/6.2MB 272.4KB/s 10.1s<13Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 42% ━━━━━─────── 2.6/6.2MB 343.1KB/s 10.3s<10Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 43% ━━━━━─────── 2.7/6.2MB 310.3KB/s 10.5s<11Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 45% ━━━━━─────── 2.8/6.2MB 380.0KB/s 10.7s<9.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 45% ━━━━━─────── 2.8/6.2MB 325.3KB/s 10.8s<10Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 46% ━━━━━╸────── 2.9/6.2MB 267.9KB/s 11.3s<12Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 47% ━━━━━╸────── 2.9/6.2MB 236.3KB/s 11.6s<14Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 48% ━━━━━╸────── 3.0/6.2MB 258.3KB/s 11.8s<13Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 49% ━━━━━╸────── 3.0/6.2MB 225.7KB/s 12.2s<14Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 49% ━━━━━╸────── 3.1/6.2MB 262.5KB/s 12.3s<12Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 50% ━━━━━╸────── 3.1/6.2MB 238.2KB/s 12.5s<13Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 51% ━━━━━━────── 3.2/6.2MB 355.5KB/s 12.6s<8.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 52% ━━━━━━────── 3.2/6.2MB 419.5KB/s 12.7s<7.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 52% ━━━━━━────── 3.3/6.2MB 310.2KB/s 13.0s<9.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 53% ━━━━━━────── 3.3/6.2MB 314.9KB/s 13.2s<9.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 53% ━━━━━━────── 3.3/6.2MB 260.7KB/s 13.3s<11Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 55% ━━━━━━╸───── 3.4/6.2MB 389.8KB/s 13.4s<7.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 55% ━━━━━━╸───── 3.5/6.2MB 354.1KB/s 13.6s<8.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 56% ━━━━━━╸───── 3.5/6.2MB 318.8KB/s 13.8s<8.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 57% ━━━━━━╸───── 3.6/6.2MB 294.8KB/s 14.0s<9.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 58% ━━━━━━╸───── 3.6/6.2MB 379.7KB/s 14.1s<7.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 58% ━━━━━━━───── 3.6/6.2MB 289.7KB/s 14.5s<9.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 60% ━━━━━━━───── 3.7/6.2MB 370.4KB/s 14.7s<7.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 60% ━━━━━━━───── 3.8/6.2MB 313.0KB/s 14.9s<8.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 61% ━━━━━━━───── 3.8/6.2MB 268.3KB/s 15.1s<9.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 62% ━━━━━━━───── 3.9/6.2MB 265.5KB/s 15.4s<9.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 64% ━━━━━━━╸──── 4.0/6.2MB 1014.9KB/s 15.5s<2Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 65% ━━━━━━━╸──── 4.1/6.2MB 336.5KB/s 15.7s<6.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 66% ━━━━━━━╸──── 4.1/6.2MB 447.6KB/s 15.8s<4.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 68% ━━━━━━━━──── 4.3/6.2MB 998.8KB/s 15.9s<2.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 69% ━━━━━━━━──── 4.3/6.2MB 371.8KB/s 16.1s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 70% ━━━━━━━━──── 4.4/6.2MB 309.5KB/s 16.5s<6.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 71% ━━━━━━━━╸─── 4.5/6.2MB 403.0KB/s 16.7s<4.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 72% ━━━━━━━━╸─── 4.5/6.2MB 314.7KB/s 16.8s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 72% ━━━━━━━━╸─── 4.5/6.2MB 242.2KB/s 17.3s<7.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 73% ━━━━━━━━╸─── 4.6/6.2MB 270.5KB/s 17.5s<6.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 74% ━━━━━━━━╸─── 4.6/6.2MB 264.4KB/s 17.6s<6.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 75% ━━━━━━━━╸─── 4.7/6.2MB 312.6KB/s 17.8s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 75% ━━━━━━━━╸─── 4.7/6.2MB 236.8KB/s 18.0s<6.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 76% ━━━━━━━━━─── 4.7/6.2MB 350.4KB/s 18.1s<4.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 76% ━━━━━━━━━─── 4.8/6.2MB 329.9KB/s 18.2s<4.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 77% ━━━━━━━━━─── 4.8/6.2MB 305.6KB/s 18.4s<4.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 78% ━━━━━━━━━─── 4.9/6.2MB 285.6KB/s 18.6s<4.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 79% ━━━━━━━━━─── 4.9/6.2MB 263.8KB/s 18.9s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 80% ━━━━━━━━━╸── 5.0/6.2MB 232.7KB/s 19.2s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 81% ━━━━━━━━━╸── 5.0/6.2MB 208.1KB/s 19.7s<5.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 82% ━━━━━━━━━╸── 5.1/6.2MB 308.4KB/s 19.8s<3.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 82% ━━━━━━━━━╸── 5.1/6.2MB 234.1KB/s 20.1s<4.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 83% ━━━━━━━━━━── 5.2/6.2MB 390.9KB/s 20.2s<2.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 84% ━━━━━━━━━━── 5.2/6.2MB 320.9KB/s 20.4s<3.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 85% ━━━━━━━━━━── 5.3/6.2MB 319.2KB/s 20.6s<3.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 86% ━━━━━━━━━━── 5.4/6.2MB 409.5KB/s 20.7s<2.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 86% ━━━━━━━━━━── 5.4/6.2MB 336.5KB/s 20.9s<2.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 87% ━━━━━━━━━━── 5.4/6.2MB 377.4KB/s 21.0s<2.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 87% ━━━━━━━━━━── 5.5/6.2MB 305.6KB/s 21.1s<2.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 89% ━━━━━━━━━━╸─ 5.5/6.2MB 439.5KB/s 21.2s<1.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 89% ━━━━━━━━━━╸─ 5.6/6.2MB 339.2KB/s 21.5s<2.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 91% ━━━━━━━━━━╸─ 5.7/6.2MB 377.9KB/s 21.7s<1.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 91% ━━━━━━━━━━╸─ 5.7/6.2MB 408.0KB/s 21.8s<1.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 93% ━━━━━━━━━━━─ 5.8/6.2MB 993.3KB/s 21.9s<0.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 95% ━━━━━━━━━━━─ 5.9/6.2MB 448.8KB/s 22.1s<0.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 96% ━━━━━━━━━━━╸ 6.0/6.2MB 413.6KB/s 22.3s<0.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 97% ━━━━━━━━━━━╸ 6.1/6.2MB 454.4KB/s 22.4s<0.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 98% ━━━━━━━━━━━╸ 6.1/6.2MB 402.3KB/s 22.7s<0.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 99% ━━━━━━━━━━━╸ 6.2/6.2MB 337.3KB/s 23.1s<0.Downloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 100% ━━━━━━━━━━━━ 6.2MB 276.3KB/s 23.1s
+New https://pypi.org/project/ultralytics/8.4.16 available  Update with 'pip install -U ultralytics'
+Ultralytics 8.4.14  Python-3.10.11 torch-2.10.0+cpu CPU (AMD Ryzen 3 7320U with Radeon Graphics)
+engine\trainer: agnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=data.yaml, degrees=0.0, deterministic=True, device=cpu, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, end2end=None, epochs=60, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.001, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=train, nbs=64, nms=False, opset=None, optimize=False, optimizer=Adam, overlap_mask=True, patience=20, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\runs\detect\train, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 22        [15, 18, 21]  1    751507  ultralytics.nn.modules.head.Detect           [1, 16, None, [64, 128, 256]]
+Model summary: 130 layers, 3,011,043 parameters, 3,011,027 gradients, 8.2 GFLOPs
+
+Transferred 319/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+train: Fast image access  (ping: 1.93.7 ms, read: 65.630.5 MB/s, size: 48.7 KB)
+train: Scanning D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\train... 82 images, 0 backgrounds, 0 corrupt: 17% ━━train: Scanning D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\train... 208 images, 0 backgrounds, 0 corrupt: 43% ━train: Scanning D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\train... 297 images, 0 backgrounds, 0 corrupt: 62% ━train: Scanning D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\train... 418 images, 0 backgrounds, 0 corrupt: 87% ━train: Scanning D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\train... 482 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 482/482 1.0Kit/s 0.5s
+train: New cache created: D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\train.cache
+val: Fast image access  (ping: 0.10.1 ms, read: 60.725.7 MB/s, size: 54.3 KB)
+val: Scanning D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\val... 104 images, 0 backgrounds, 0 corrupt: 86% ━━━━━val: Scanning D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\val... 121 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 121/121 1.1Kit/s 0.1s
+val: New cache created: D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\labels\val.cache
+optimizer: Adam(lr=0.001, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Plotting labels to D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\runs\detect\train\labels.jpg...
+Image sizes 640 train, 640 val
+Using 0 dataloader workers
+Logging results to D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\runs\detect\train
+Starting training for 60 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/60         0G      1.023      1.757      1.231         12        640: 100% ━━━━━━━━━━━━ 61/61 3.5s/it 3:31
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.7s
+                   all        121        318      0.978      0.635      0.693       0.62
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/60         0G     0.9284       1.26      1.207          6        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:15
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.938      0.682      0.708      0.624
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/60         0G      0.859      1.127      1.171          5        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:12
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318      0.979      0.689      0.752      0.663
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/60         0G     0.8279      1.067      1.166         13        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.3s/it 18.4s
+                   all        121        318      0.995      0.675      0.755      0.675
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/60         0G     0.8235      1.035      1.163          6        640: 100% ━━━━━━━━━━━━ 61/61 3.8s/it 3:51
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.4s/it 19.1s
+                   all        121        318      0.998      0.692      0.768       0.69
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/60         0G     0.8357      1.036      1.163          9        640: 100% ━━━━━━━━━━━━ 61/61 3.5s/it 3:35
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318      0.985      0.689      0.756      0.678
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/60         0G     0.8238      1.028      1.168          7        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:11
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.986      0.689      0.771      0.691
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/60         0G     0.7585     0.9593      1.133          4        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.994      0.689      0.746       0.68
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/60         0G     0.8207      1.008       1.17         10        640: 100% ━━━━━━━━━━━━ 61/61 3.3s/it 3:19
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.982      0.695      0.766      0.697
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/60         0G     0.7974     0.9748      1.167          7        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:12
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.995      0.691      0.791      0.711
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/60         0G     0.8092     0.9914      1.187          7        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.988      0.692      0.777      0.705
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/60         0G     0.7615     0.9377      1.152          3        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:11
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.995      0.691      0.796      0.706
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/60         0G       0.75     0.8975      1.146          7        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:15
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.998      0.692      0.799       0.72
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/60         0G     0.7197     0.8835       1.12          9        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.4s
+                   all        121        318      0.994      0.692      0.775      0.707
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/60         0G     0.7047     0.8647      1.115          9        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.981      0.689      0.778       0.71
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/60         0G     0.6673     0.8118      1.091          4        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:15
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 16.9s
+                   all        121        318      0.994      0.692      0.786      0.718
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/60         0G     0.7004     0.8412      1.111          5        640: 100% ━━━━━━━━━━━━ 61/61 3.3s/it 3:21
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.994      0.695      0.813      0.732
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/60         0G     0.6976     0.8456       1.11          2        640: 100% ━━━━━━━━━━━━ 61/61 3.3s/it 3:19
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318      0.995      0.692      0.753        0.7
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/60         0G     0.6822     0.8252      1.107          3        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.2s
+                   all        121        318      0.999      0.692      0.817      0.725
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/60         0G     0.6712     0.8239      1.102          8        640: 100% ━━━━━━━━━━━━ 61/61 3.3s/it 3:20
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.994      0.689      0.784      0.719
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/60         0G     0.6917     0.8302      1.125          7        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:16
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 16.9s
+                   all        121        318      0.996      0.696      0.807      0.722
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/60         0G     0.6955     0.8387      1.113          6        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.995      0.686      0.789       0.72
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/60         0G     0.6984     0.8322      1.122          5        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:11
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 16.9s
+                   all        121        318      0.995      0.691      0.801      0.726
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/60         0G     0.6553     0.7924      1.094         11        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:15
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.999      0.689      0.758      0.699
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/60         0G      0.627     0.7606      1.075          3        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.2s
+                   all        121        318      0.994      0.686      0.814      0.727
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      26/60         0G     0.6781     0.8015      1.093         10        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.999      0.695       0.81      0.726
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      27/60         0G     0.6355     0.7336      1.071         13        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.987        0.7      0.823      0.732
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      28/60         0G     0.6566     0.7844      1.099         10        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.999      0.692      0.824      0.729
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      29/60         0G     0.6516     0.7684      1.092          7        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.991      0.697      0.817      0.732
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      30/60         0G     0.6466     0.7482      1.098         22        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:12
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.991      0.695      0.816      0.733
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      31/60         0G     0.6382     0.7427      1.094         11        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:11
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.987      0.697      0.823      0.732
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      32/60         0G     0.6507     0.7547      1.091         10        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 16.9s
+                   all        121        318      0.995      0.692      0.826      0.738
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      33/60         0G      0.629     0.7364      1.072         11        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:12
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.1s
+                   all        121        318      0.999      0.695      0.795      0.724
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      34/60         0G        0.6     0.7254      1.063          7        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:15
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318          1       0.69      0.806      0.732
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      35/60         0G     0.6322     0.7358      1.078         13        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.6s
+                   all        121        318      0.991      0.694      0.825      0.734
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      36/60         0G     0.6035     0.6951      1.048         13        640: 100% ━━━━━━━━━━━━ 61/61 3.5s/it 3:33
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.6s
+                   all        121        318      0.995      0.695      0.824      0.737
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      37/60         0G     0.5812     0.6725      1.055          2        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.991      0.703      0.847      0.745
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      38/60         0G     0.6317     0.7417      1.087          5        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:16
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.998      0.692      0.794      0.723
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      39/60         0G     0.6144     0.7275      1.084          6        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318          1      0.692      0.815      0.728
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      40/60         0G     0.5895      0.673      1.056          8        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:11
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318          1      0.695      0.819      0.736
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      41/60         0G     0.6194     0.7106      1.072         11        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:11
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 16.9s
+                   all        121        318      0.996      0.698       0.82      0.736
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      42/60         0G     0.5953     0.6862      1.052         13        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:12
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.994      0.695      0.826      0.736
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      43/60         0G     0.6277      0.731      1.086          3        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 16.9s
+                   all        121        318          1      0.692      0.833      0.742
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      44/60         0G     0.5737     0.6746      1.058          6        640: 100% ━━━━━━━━━━━━ 61/61 3.3s/it 3:19
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.6s
+                   all        121        318      0.995      0.695      0.831      0.744
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      45/60         0G     0.6338     0.7252       1.09          9        640: 100% ━━━━━━━━━━━━ 61/61 3.3s/it 3:19
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.5s
+                   all        121        318      0.996      0.698      0.827      0.742
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      46/60         0G     0.5217     0.6106      1.013          3        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318          1      0.692      0.806      0.728
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      47/60         0G       0.57     0.6706      1.056          4        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318      0.987      0.698      0.837      0.743
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      48/60         0G     0.5832     0.6751      1.069          4        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:15
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318      0.995      0.695      0.832      0.738
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      49/60         0G     0.5764     0.6764       1.05         12        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:15
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.2s
+                   all        121        318          1      0.692      0.839      0.747
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      50/60         0G     0.5499     0.6089      1.033         10        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:18
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.4s
+                   all        121        318      0.985      0.701      0.834      0.746
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      51/60         0G     0.5652     0.6399      1.056          5        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.4s
+                   all        121        318      0.996      0.701      0.834      0.744
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      52/60         0G     0.5575     0.6301      1.044          6        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:17
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.4s
+                   all        121        318      0.984      0.704      0.836      0.746
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      53/60         0G      0.547     0.6124      1.043          3        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318      0.995      0.695       0.83      0.743
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      54/60         0G     0.5293     0.5985      1.037          5        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.2s
+                   all        121        318      0.964      0.714       0.84      0.743
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      55/60         0G     0.5573     0.6355      1.065          5        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.2s
+                   all        121        318      0.976      0.701      0.844      0.745
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      56/60         0G     0.5544     0.6139      1.052          6        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.3s
+                   all        121        318      0.995      0.695      0.837      0.743
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      57/60         0G     0.5302     0.6014      1.043          4        640: 100% ━━━━━━━━━━━━ 61/61 3.2s/it 3:13
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.4s
+                   all        121        318      0.994      0.695      0.839      0.743
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      58/60         0G     0.5273     0.5892      1.042          6        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:11
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 17.0s
+                   all        121        318      0.991      0.696      0.844      0.747
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      59/60         0G     0.5289      0.579      1.044          4        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:09
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.2s/it 17.4s
+                   all        121        318      0.985      0.698      0.847      0.748
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      60/60         0G     0.5439     0.5996      1.051          5        640: 100% ━━━━━━━━━━━━ 61/61 3.1s/it 3:09
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 2.1s/it 16.9s
+                   all        121        318      0.983      0.698      0.843      0.747
+
+60 epochs completed in 3.558 hours.
+Optimizer stripped from D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\runs\detect\train\weights\last.pt, 6.3MB
+Optimizer stripped from D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\runs\detect\train\weights\best.pt, 6.3MB
+
+Validating D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\runs\detect\train\weights\best.pt...
+Ultralytics 8.4.14  Python-3.10.11 torch-2.10.0+cpu CPU (AMD Ryzen 3 7320U with Radeon Graphics)
+Model summary (fused): 73 layers, 3,005,843 parameters, 0 gradients, 8.1 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 1.8s/it 14.6s
+                   all        121        318      0.985      0.698      0.847      0.748
+Speed: 2.3ms preprocess, 108.1ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\runs\detect\train
+
+✅ Snow model training completed!
+📁 Model saved at: runs/detect/train/weights/best.pt
+PS D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model> python detect.py
+📂 Enter image path: D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model\dataset\images\train\040227818_jpg.rf.2f1096990725c8b8d0902f2109049cf2.jpg
+❄ Snow Detected!
+PS D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model> python detect.py
+📂 Enter image path: C:\Users\ELCOT\Downloads\beautiful-forested-mountains-fog.jpg
+⚠ No Snow Detected
+PS D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model> python detect.py
+📂 Enter image path: C:\Users\ELCOT\Downloads\fog.jpg
+⚠ No Snow Detected
+PS D:\FOREST_FIRE\Forest-fire-detection\FireDetectionApp\snow_model>

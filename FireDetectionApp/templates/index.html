@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FireGuard AI - Forest Fire Detection</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --fire-primary: #f97316;
+            --fire-deep: #dc2626;
+            --fire-glow: #fbbf24;
+            --bg-base: #0a0a0b;
+            --bg-card: #111113;
+            --bg-card2: #18181c;
+            --border: rgba(249, 115, 22, 0.18);
+            --border-strong: rgba(249, 115, 22, 0.35);
+            --text-primary: #f5f5f4;
+            --text-muted: #78716c;
+            --text-dim: #44403c;
+            --green-live: #22c55e;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-base);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        #fireCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.35;
+        }
+
+        /* ── NOISE OVERLAY ─────────────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* ── HEADER ────────────────────────────────── */
+        .header {
+            text-align: center;
+            padding: 72px 20px 0;
+        }
+
+        .fire-icon {
+            font-size: 56px;
+            animation: pulse 2s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 18px rgba(251, 191, 36, 0.5));
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 18px rgba(251, 191, 36, 0.45));
+            }
+
+            50% {
+                transform: scale(1.08);
+                filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.75));
+            }
+        }
+
+        .title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            margin-top: 12px;
+            background: linear-gradient(135deg, var(--fire-glow) 0%, var(--fire-primary) 50%, var(--fire-deep) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            color: var(--text-muted);
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 20px;
+            padding: 7px 18px;
+            border-radius: 30px;
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            color: #f87171;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .status::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #f87171;
+            animation: blinkDot 1.2s infinite;
+        }
+
+        @keyframes blinkDot {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+        }
+
+        /* ── STATS ──────────────────────────────────── */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 44px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            padding: 22px 36px;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-width: 130px;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--fire-primary), transparent);
+            opacity: 0.6;
+        }
+
+        .stat-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--fire-glow), var(--fire-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card p {
+            margin-top: 4px;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        /* ── RESET BUTTON ───────────────────────────── */
+        .reset-wrap {
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        /* ── MAIN CONTAINER ─────────────────────────── */
+        .container {
+            width: min(85%, 960px);
+            margin: 48px auto 0;
+            padding: 36px;
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+        }
+
+        /* ── TABS ───────────────────────────────────── */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            background: var(--bg-base);
+            padding: 6px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+
+        .tab {
+            padding: 10px 26px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            transition: all 0.25s ease;
+            flex: 1;
+            text-align: center;
+        }
+
+        .tab.active,
+        .tab:hover {
+            background: var(--bg-card2);
+            color: var(--fire-primary);
+            border: 1px solid var(--border-strong);
+        }
+
+        .tab.active {
+            color: var(--fire-glow);
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(220, 38, 38, 0.08));
+        }
+
+        /* ── SECTIONS ───────────────────────────────── */
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* ── UPLOAD BOX ─────────────────────────────── */
+        .upload-box {
+            border: 1.5px dashed var(--border-strong);
+            padding: 52px 40px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all 0.3s ease;
+            background: rgba(249, 115, 22, 0.02);
+        }
+
+        .upload-box:hover {
+            background: rgba(249, 115, 22, 0.05);
+            border-color: var(--fire-primary);
+        }
+
+        .upload-box h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        /* ── BUTTONS ────────────────────────────────── */
+        button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--fire-primary), var(--fire-deep));
+            color: white;
+            letter-spacing: 0.3px;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent);
+            border-radius: inherit;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(249, 115, 22, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Reset button override */
+        .reset-btn {
+            background: var(--bg-card2);
+            border: 1px solid rgba(220, 38, 38, 0.4);
+            color: #f87171;
+            font-size: 13px;
+        }
+
+        .reset-btn:hover {
+            background: rgba(220, 38, 38, 0.12);
+            box-shadow: 0 6px 22px rgba(220, 38, 38, 0.25);
+        }
+
+        input[type="file"] {
+            margin-top: 20px;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+
+        /* ── ALERT POPUP ────────────────────────────── */
+        .alert-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: #130000;
+            border: 2px solid var(--fire-deep);
+            padding: 44px 60px;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            box-shadow: 0 0 60px rgba(220, 38, 38, 0.4), 0 0 120px rgba(220, 38, 38, 0.15);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 999;
+        }
+
+        .alert-box.active {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .alert-box h1 {
+            color: #f87171;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            animation: blink 0.8s ease-in-out infinite;
+        }
+
+        .alert-box p {
+            margin-top: 10px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.25;
+            }
+        }
+
+        /* ── WEBCAM ─────────────────────────────────── */
+        .webcam-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+            border: 1.5px solid var(--border);
+        }
+
+        .webcam-container.active {
+            box-shadow: 0 0 0 2px var(--green-live), 0 0 30px rgba(34, 197, 94, 0.25);
+            border-color: var(--green-live);
+        }
+
+        .live-indicator {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(220, 38, 38, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            display: none;
+            animation: blinkLive 1s infinite;
+            letter-spacing: 1px;
+        }
+
+        @keyframes blinkLive {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .rec-indicator {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            color: #f87171;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            display: none;
+            letter-spacing: 1px;
+        }
+
+        .timer {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            padding: 5px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            display: none;
+            letter-spacing: 1.5px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* ── FOOTER ─────────────────────────────────── */
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 28px 20px;
+            color: var(--text-dim);
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="fireCanvas"></canvas>
+
+    <div class="alert-box" id="alertBox">
+        <h1>🔥 FIRE DETECTED 🔥</h1>
+        <p>Immediate Action Required</p>
+        <button onclick="closeAlert()">Close</button>
+    </div>
+
+    <div class="header">
+        <div class="fire-icon">🔥</div>
+        <div class="title">FOREST FIRE DETECTION</div>
+        <div class="subtitle">AI Powered Wildfire Surveillance Platform</div>
+        <div class="status">SYSTEM ACTIVE</div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h2 id="accuracy">0%</h2>
+            <p>Accuracy</p>
+        </div>
+        <div class="stat-card">
+            <h2>YOLOv8</h2>
+            <p>Model</p>
+        </div>
+        <div class="stat-card">
+            <h2>LIVE</h2>
+            <p>Status</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        function resetCall() {
+            fetch("/reset_call", { method: "POST" })
+                .then(response => response.json())
+                .then(data => {
+                    alert("✅ Call Reset Successfully");
+                    console.log(data);
+                })
+                .catch(error => {
+                    alert("❌ Reset Failed");
+                    console.error(error);
+                });
+        }
+    </script>
+
+    <div class="container">
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab(0)">🖼 IMAGE</div>
+            <div class="tab" onclick="showTab(1)">🎥 VIDEO</div>
+            <div class="tab" onclick="showTab(2)">📷 WEBCAM</div>
+        </div>
+
+        <div class="section active">
+            <div class="upload-box">
+                <form action="/upload_image" method="post" enctype="multipart/form-data">
+                    <h2>Upload Image</h2>
+                    <input type="file" name="file" required>
+                    <br>
+                    <button type="submit">Detect Image</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="upload-box">
+                <h2>Video Detection</h2>
+                <input type="file" id="videoFile">
+                <br>
+                <button onclick="startVideo()">Start Video Detection</button>
+                <br>
+                <img id="videoStream">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="upload-box">
+                <h2>Live Webcam</h2>
+                <button onclick="startWebcam()">Start Webcam</button>
+                <button onclick="stopWebcam()">Stop Webcam</button>
+
+                <div class="webcam-container" id="webcamContainer">
+                    <div class="live-indicator" id="liveBadge">🔴 LIVE</div>
+                    <div class="rec-indicator" id="recBadge">● REC</div>
+                    <div class="timer" id="timer">00:00:00</div>
+                    <img id="webcam">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        🔥 FireGuard AI — Advanced Forest Protection System
+    </div>
+
+    <script>
+        /* Fire Background */
+        const canvas = document.getElementById("fireCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let particles = [];
+        function createParticle() {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: canvas.height,
+                size: Math.random() * 5 + 2,
+                speedY: Math.random() * 3 + 1,
+                color: `rgba(255,${Math.random() * 150},0,0.8)`
+            });
+        }
+        function animateFire() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (particles.length < 100) createParticle();
+            particles.forEach((p, i) => {
+                p.y -= p.speedY;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+                if (p.y < 0) particles.splice(i, 1);
+            });
+            requestAnimationFrame(animateFire);
+        }
+        animateFire();
+
+        /* Accuracy Counter */
+        let accuracy = 0;
+        function animateCounter() {
+            if (accuracy < 94) {
+                accuracy++;
+                document.getElementById("accuracy").innerText = accuracy + "%";
+                setTimeout(animateCounter, 30);
+            }
+        }
+        animateCounter();
+
+        /* Alert */
+        function triggerAlert() {
+            document.getElementById("alertBox").classList.add("active");
+        }
+        function closeAlert() {
+            document.getElementById("alertBox").classList.remove("active");
+        }
+
+        /* Tabs */
+        function showTab(index) {
+            document.querySelectorAll(".tab").forEach((t, i) => {
+                t.classList.toggle("active", i === index);
+            });
+            document.querySelectorAll(".section").forEach((s, i) => {
+                s.classList.toggle("active", i === index);
+            });
+        }
+
+        /* Webcam */
+        let timerInterval;
+        let seconds = 0;
+
+        function startWebcam() {
+            document.getElementById("webcam").src = "/webcam_feed";
+            document.getElementById("liveBadge").style.display = "block";
+            document.getElementById("recBadge").style.display = "block";
+            document.getElementById("timer").style.display = "block";
+            document.getElementById("webcamContainer").classList.add("active");
+            seconds = 0;
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function stopWebcam() {
+            document.getElementById("webcam").src = "";
+            document.getElementById("liveBadge").style.display = "none";
+            document.getElementById("recBadge").style.display = "none";
+            document.getElementById("timer").style.display = "none";
+            document.getElementById("webcamContainer").classList.remove("active");
+            clearInterval(timerInterval);
+        }
+
+        function updateTimer() {
+            seconds++;
+            let hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
+            let mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+            let secs = String(seconds % 60).padStart(2, '0');
+            document.getElementById("timer").innerText = `${hrs}:${mins}:${secs}`;
+        }
+
+        /* Video */
+        function startVideo() {
+            let f = new FormData();
+            f.append("file", document.getElementById("videoFile").files[0]);
+            fetch("/upload_video", { method: "POST", body: f })
+                .then(r => r.json())
+                .then(d => {
+                    document.getElementById("videoStream").src = d.stream_url;
+                    setTimeout(triggerAlert, 4000);
+                });
+        }
+    </script>
+
+</body>
+
+</html>
