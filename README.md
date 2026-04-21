@@ -168,7 +168,7 @@ The fire/smoke detection model was trained on the [DFireDataset](https://github.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/thilak-r/Forest-fire-detection.git
+git clone https://github.com/Sasi-r08/Forest-fire-detection.git
 cd Forest-fire-detection/FireDetectionApp
 ```
 
