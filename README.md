@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 # 🔥 Forest Fire Detection System
 
 <p align="center">
