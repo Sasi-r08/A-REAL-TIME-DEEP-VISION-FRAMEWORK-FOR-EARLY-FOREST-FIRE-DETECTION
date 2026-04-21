@@ -316,4 +316,4 @@ This project is licensed under the [Apache 2.0 License](https://opensource.org/l
   Made with ❤️ for wildfire prevention and forest safety<br/>
   <strong>🔥 Detect Early. Alert Fast. Save Lives. 🔥</strong>
 </p>
->>>>>>> 5e27826 (Initial commit - Forest Fire Detection)
+
