@@ -1,4 +1,4 @@
- # 🔥 Forest Fire Detection System
+ # Real-Time Multi-Hazard Visual Detection & Alert System
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python" alt="Python">
